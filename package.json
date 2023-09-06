@@ -1,0 +1,28 @@
+{
+  "name": "football_app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:build": "tsc -w",
+    "start:run": "nodemon build/index.js",
+    "start": "concurrently npm:start:*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kellraym/ts_football_project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kellraym/ts_football_project/issues"
+  },
+  "homepage": "https://github.com/kellraym/ts_football_project#readme",
+  "dependencies": {
+    "@types/node": "^20.5.9",
+    "concurrently": "^8.2.1",
+    "nodemon": "^3.0.1"
+  }
+}
