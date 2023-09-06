@@ -7,6 +7,12 @@ const matches = fs
   .split("\n")
   .map((row: string): string[] => row.split(","));
 
+enum MatchResult {
+  HomeWin = "H",
+  AwayWin = "A",
+  Draw = "D",
+}
+
 let manUnitedWins = 0;
 
 for (let match of matches) {
@@ -15,8 +21,8 @@ for (let match of matches) {
   const winner = match[5];
 
   if (
-    (home === "Man United" && winner === "H") ||
-    (away === "Man United" && winner === "A")
+    (home === "Man United" && winner === MatchResult.HomeWin) ||
+    (away === "Man United" && winner === MatchResult.AwayWin)
   )
     manUnitedWins++;
 }
