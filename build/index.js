@@ -25,5 +25,5 @@ for (let match of matches) {
         (away === "Man United" && winner === MatchResult.AwayWin))
         manUnitedWins++;
 }
-console.log(` Man united won ${manUnitedWins} games`);
+console.log(`Man united won ${manUnitedWins} games`);
 console.log("small change");

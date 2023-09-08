@@ -27,5 +27,5 @@ for (let match of matches) {
     manUnitedWins++;
 }
 
-console.log(` Man united won ${manUnitedWins} games`);
+console.log(`Man united won ${manUnitedWins} games`);
 console.log("small change");
