@@ -2,14 +2,14 @@ import { CsvFileReader } from "./CsvFileReader";
 import { MatchReader } from "./MatchReader";
 import { MatchResult } from "./MatchResult";
 
-const reader = new MatchReader("football.csv");
-reader.read();
+const csvFileReader = new CsvFileReader("football.csv");
+
+const matchReader = new MatchReader(csvFileReader);
+matchReader.load();
 
 let manUnitedWins = 0;
 
-console.log(reader.data[0][0]);
-
-for (let match of reader.data) {
+for (let match of matchReader.matches) {
   const home = match[1];
   const away = match[2];
   const winner = match[5];
